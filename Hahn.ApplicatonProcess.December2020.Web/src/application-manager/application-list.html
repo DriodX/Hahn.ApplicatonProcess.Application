@@ -1,0 +1,40 @@
+<template>
+    <div class="card card-primary">
+        <div class="card-heading m-3 mb-0">
+            <h3 class="card-title text-white" t="universal:applicationList">Applications</h3>
+        </div>
+        <div class="card-body">
+            <div class="form-group">
+                <div>
+                    <br />
+                    <button click.delegate="delete(selectedId)" disabled.bind="selectedId === 0 || selectedId === null"
+                        class="pull-left btn btn-danger btn-striped btn-sm" aria-label="Left Align">
+                        <span class="glyphicon glyphicon-trash" aria-hidden="true" title="Remove Application"></span>
+                        <span t="universal:removeApplication">Remove Application</span>
+                    </button>
+                    <button class="pull-right btn btn-primary btn-striped btn-sm" click.delegate="create()">
+                        <span class="glyphicon glyphicon-user" aria-hidden="true" title="New Application"></span> <span t="universal:newApplication">New Application</span>
+                    </button>
+                    <br />
+                </div>
+            </div>
+            <br />
+            <div class="form-group">
+                <div class="application-list">
+                    <ul class="list-group">
+                        <li repeat.for="application of applications"
+                            class="list-group-item ${application.id === $parent.selectedId ? 'active' : ''}">
+                            <a route-href="route: applications; params.bind: {id:application.id}"
+                                click.delegate="$parent.select(application)">
+                                <h4 class="list-group-item-heading">${!application.name &&
+                                    !application.familyName ? "New Application" : application.name + " " +
+                                    application.familyName }</h4>
+                                <p class="list-group-item-text">${application.emailAddress}</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</template>

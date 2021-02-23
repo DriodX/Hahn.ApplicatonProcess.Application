@@ -1,0 +1,12 @@
+<template>
+  <require from="./nav-bar.html"></require>
+  <require from="./shell.css"></require>
+  
+  <nav-bar router.bind="router" set-german-locale.call="setGermanLocale()" set-english-locale.call="setEnglishLocale()"></nav-bar>
+
+  <loading-indicator loading.bind="router.isNavigating"></loading-indicator>
+
+  <div class="page-host mt-5">
+    <router-view></router-view>
+  </div>
+</template>

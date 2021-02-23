@@ -1,0 +1,15 @@
+{
+    "application": "Anwendung",
+    "applicationList": "Anwendungsliste",
+    "removeApplication": "Anwendung Entfernen",
+    "newApplication": "Neue Bewerbung",
+    "createNewApplication": "Neue Anwendung Erstellen",
+    "send": "Senden",
+    "reset": "Zurücksetzen",
+    "viewDetails": "Details Anzeigen",
+    "applicationAdded": "Anwendung Hinzugefügt",
+    "addSuccess": "wurde erfolgreich hinzugefügt.",
+    "homeTitle": "Willkommen bei Hahn Application Process, unterstützt von Aurelia",
+    "homeDesc": "Sie können beginnen, indem Sie eine neue Anwendung erstellen. Klicken Sie einfach im linken Menü auf Neue Anwendung. Von Ihnen erstellte Anwendungen werden im linken Bereich aufgelistet.",
+    "devBy": "Entwickelt von:"
+}

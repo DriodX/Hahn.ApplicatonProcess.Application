@@ -1,0 +1,30 @@
+{
+  "name": "Hahn_Application_Process",
+  "type": "project:application",
+  "paths": {
+    "root": "src",
+    "resources": "src/resources",
+    "elements": "src/resources/elements",
+    "attributes": "src/resources/attributes",
+    "valueConverters": "src/resources/value-converters",
+    "bindingBehaviors": "src/resources/binding-behaviors"
+  },
+  "transpiler": {
+    "id": "typescript",
+    "fileExtension": ".ts"
+  },
+  "build": {
+    "options": {
+      "server": "dev",
+      "extractCss": "prod",
+      "coverage": false
+    }
+  },
+  "platform": {
+    "hmr": false,
+    "open": false,
+    "port": 8080,
+    "host": "localhost",
+    "output": "dist"
+  }
+}

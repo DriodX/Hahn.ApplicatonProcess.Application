@@ -1,0 +1,16 @@
+<template>
+
+    <div class="card card-primary text-white">
+        <div class="card-heading m-3">
+            <h3 class="card-title" t="universal:applicationAdded"> Application Addeded </h3>
+        </div>
+        <div class="card-body">
+            <h5><strong class="text-dark">${applicant.name} ${applicant.familyName}</strong> <span t="universal:addSuccess">has been added successfully.</span></h5>
+            
+            <button type="button" class="btn btn-primary btn-striped pull-right" click.delegate="viewDetails()">
+                <i class="fa fa-"></i> <span t="universal:viewDetails">View Details</span>
+              </button>
+        </div>
+    </div>
+
+</template>

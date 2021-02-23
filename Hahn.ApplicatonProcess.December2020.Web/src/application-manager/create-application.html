@@ -1,0 +1,92 @@
+<template>
+  <require from="../resources/value-converters/number-value"></require>
+  <require from="../resources/elements/validation-style.css"></require>
+
+    <div class="card card-primary">
+      <div class="card-heading m-3">
+        <h3 class="card-title text-white" t="universal:createNewApplication"> Create New Application</h3>
+        <p id="validation-summary"></p>
+      </div>
+      <div class="card-body">
+        <form role="form" class="form-horizontal">
+          <div class="form-group col-sm-10">
+            <label class="sr-only" for="${name}" t="post-form:name">Name</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text" t="post-form:name">Name</div>
+              </div>
+              <input type="text" placeholder="name" id="${name}" class="form-control"
+                value.bind="name & validate">
+            </div>
+          </div>
+  
+          <div class="form-group col-sm-10">
+            <label class="sr-only" for="${familyName}">Family Name</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">Family Name</div>
+              </div>
+              <input type="text" placeholder="family name" id="${familyName}" class="form-control"
+                value.bind="familyName & validate">
+            </div>
+          </div>
+  
+          <div class="form-group col-sm-10">
+            <label class="sr-only" for="${address}">Address</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">Address</div>
+              </div>
+              <input type="text" placeholder="address" id="${address}" class="form-control"
+                value.bind="address & validate">
+            </div>
+          </div>
+          
+          <div class="form-group col-sm-10">
+            <label class="sr-only" for="${countryOfOrigin}">Country Of Origin</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">Country Of Origin</div>
+              </div>
+              <input type="text" placeholder="country of origin" id="${countryOfOrigin}" class="form-control"
+                value.bind="countryOfOrigin & validate">
+            </div>
+          </div>
+        
+          <div class="form-group col-sm-10">
+            <label class="sr-only" for="${emailAddress}">Email Address</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">Email Address</div>
+              </div>
+              <input type="text" placeholder="email" id="${emailAddress}" class="form-control"
+                value.bind="emailAddress & validate">
+            </div>
+          </div>
+          
+          <div class="form-group col-sm-10">
+            <label class="sr-only" for="${age}">Age</label>
+            <div class="input-group mb-2">
+              <div class="input-group-prepend">
+                <div class="input-group-text">Age</div>
+              </div>
+               <input type="number" placeholder="age" id="${age}" class="form-control" number-value.bind="age & validate">
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <div class="col-sm-12">
+              <label class="text-white"><input type="checkbox" checked.bind="hired"> Hired?</label>
+            </div>
+  
+            <button type="button" class="btn btn-danger btn-striped pull-right ml-3" disabled.bind="resetEnabled" click.delegate="reset()">
+                <i class="fa fa-undo"></i> <span t="universal:reset">Reset</span>
+              </button>
+
+            <button type="button" class="btn btn-primary btn-striped pull-right" id="sendBtn" disabled click.delegate="send()">
+              <i class="fa fa-send"></i> <span t="universal:send">Send</span>
+            </button>
+        </form>
+      </div>
+    </div>
+  </template>

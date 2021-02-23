@@ -1,0 +1,8 @@
+.invalid-feedback {
+    display: block;
+    width: 100%;
+    margin-top: 0rem;
+    font-size: 100%;
+    color: #7f242d;
+    font-weight: 700;
+}

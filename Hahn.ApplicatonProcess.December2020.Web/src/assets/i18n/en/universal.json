@@ -1,0 +1,15 @@
+{
+    "application": "Application",
+    "applicationList": "Applicaiton List",
+    "removeApplication": "Remove Application",
+    "newApplication": "New Application",
+    "createNewApplication": "Create New Application",
+    "send": "Send",
+    "reset": "Reset",
+    "viewDetails": "View Details",
+    "applicationAdded": "Application Added",
+    "addSuccess": "has been added successfully.",
+    "homeTitle": "Welcome to Hahn Application Process, Powered by Aurelia",
+    "homeDesc": "You can start by creating a new application, just click on New Application from the left menu. Applications you create will be listed in the left pane.",
+    "devBy": "Developed by:"
+}
